@@ -1,3 +1,118 @@
+.body{
+    font-family: "gimlet-display", serif;
+font-weight: 400;
+font-style: normal;
+background-image: url(socc.webp);
+background-repeat: no-repeat;
+background-size: fit;
+
+}
 body{
-    text-color:black;
+    font-family: "gimlet-display", serif;
+font-weight: 400;
+font-style: normal;
+}
+  /*found from cssscan*/
+.button-56 {
+  align-items: center;
+  background-color: #388bf8;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-family: "gimlet-display", serif;
+font-weight: 400;
+font-style: normal;
+font-size:20px;
+}
+
+.button-56:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
+}
+
+.button-56:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
+.prompt-message{
+    position: fixed;
+    top:10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color:white;
+    border-radius: 5px;
+    font-size:200px;
+    font-weight:bold;
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+.prompt-message.show{
+    display: block;
+    opacity: 1;
+}
+#promptMessage{
+    position: fixed;
+    top:20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color:rgb(22, 17, 17);
+    border-radius: 5px;
+    font-size:200px;
+    font-weight:bold;
+    z-index: 1000;
+    opacity: 0;
+animation: popUp 1s fowards;    
+}
+#popupRestartBtn {
+margin-top: 15px;
+background-color: #8fbd9a;
+color: white;
+padding: 10px 25px;
+border-radius: 10px;
+cursor: pointer;
+font-size: 18px;
+}
+
+#popupRestartBtn:hover {
+background-color: #218838;
 }
