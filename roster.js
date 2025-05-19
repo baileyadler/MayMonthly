@@ -14,7 +14,7 @@ col.innerHTML = `
 <div class="card-body text-center">
 <h5 class="card-title mb-1"> ${p.firstName}${p.lastName}</h5>
 <div class="badge badge-position badge-pos-${p.position}'>${p.position}</div>
-<p class="small text-muted mb-0">Age${p.Age}</p>
+<p class="small text-muted mb-0">Age${p.age}</p>
 </div>
 </div>`
 
