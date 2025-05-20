@@ -86,6 +86,11 @@ marquee{
     transform: rotate(360deg);
   }
 }
+.card{
+  background-color: rgb(196, 106, 118);
+  height:auto;
+  margin-top:50px;
+}
 p{
-  color:black;
+  color:white;
 }
