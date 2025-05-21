@@ -89,8 +89,15 @@ marquee{
 .card{
   background-color: rgb(196, 106, 118);
   height:auto;
+  border: 3px solid red;
   margin-top:50px;
+  border-radius:10px;
+}
+.card:hover{
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
+  border: 6px solid rgb(3, 3, 113);  
 }
 p{
-  color:white;
+  color:rgb(18, 10, 10);
 }
