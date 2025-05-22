@@ -38,7 +38,16 @@ font-weight: 400;
 font-style: normal;
 font-size:20px;
 }
-
+.button-container {
+  display: flex;
+  justify-content: center;  
+  align-items: center;      
+  position: fixed;           
+  top: 0;                    
+  left: 0;                   
+  width: 100%;               
+  height: 100%;          
+  z-index: 10;              }
 .button-56:after {
   background-color: #111;
   border-radius: 8px;
@@ -73,11 +82,11 @@ font-size:20px;
   }
 }
 marquee{
-  height:100vh;
+  height:90vh;
 }
 .ball{
   max-width:150px;
-  animation: animate 1004s ease-out infinite;
+  animation: animate 10s ease-out infinite;
 }
 @keyframes animate{
   0%{
@@ -88,16 +97,26 @@ marquee{
 }
 .card{
   background-color: rgb(196, 106, 118);
-  height:auto;
+  height:200px;
   border: 3px solid red;
   margin-top:50px;
+    margin-bottom:50px;
+      margin-left:30px;
+        margin-right:30px;
   border-radius:10px;
+  
 }
 .card:hover{
   transform: scale(1.2);
   transition: transform 0.3s ease;
-  border: 6px solid rgb(3, 3, 113);  
+  border: 5px solid rgb(3, 3, 113);  
 }
 p{
   color:rgb(18, 10, 10);
+}
+.card-img-top{
+  transition: transform 0.3s ease;
+}
+.card:hover .card-img-top{
+transform:scale(1.02);
 }
