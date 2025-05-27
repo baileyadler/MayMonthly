@@ -159,13 +159,6 @@ const players = [
         Fact: 'Her hometown is Studio City, CA.',
         photo: 'lys.jpg'
     },
-     {
-        firstName: 'Gisele',
-        lastName: 'Thompson',
-        position: 'Defender',
-        Age: '19',
-        Fact: 'Her hometown is Studio City, Calif.',
-        photo: 'gis.jpg'
-    },
+
    
 ]
