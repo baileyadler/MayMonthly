@@ -1,47 +1,57 @@
-.body {
+body {
   font-family: "gimlet-display", serif;
   font-weight: 400;
   font-style: normal;
   background-image: url(newsocc.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   overflow-x: hidden;
-  overflow-y: auto;
-  padding: 0;
+  height: 100vh;
   margin: 0;
-  border: 10px solid red; 
+  padding: 0;
+  border: 10px solid red;
 }
 
-.start {
-  background-color: #388bf8;
-  border: 10px solid red; 
-}
-
-/* Button styles - unchanged */
 .button-56 {
   align-items: center;
-  background-color: #388bf8;
+  background-color: #e92929;
   border: 2px solid #111;
   border-radius: 8px;
-  box-sizing: border-box;
-  color: #ffffff;
+  color: #fff;
   cursor: pointer;
   display: flex;
-  height: 48px;
   justify-content: center;
-  line-height: 24px;
-  max-width: 100%;
+  height: 48px;
   padding: 0 25px;
-  position: relative;
-  text-align: center;
   text-decoration: none;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  font-family: "gimlet-display", serif;
-  font-weight: 400;
-  font-style: normal;
   font-size: 20px;
+  bottom:20px;
+  left:50%;
+  transform: translateX(-50%);
+  z-index:2;
+  box-shadow:0 4px 8px red;
+  transition: background-color 0.3s red;
+  font-family: "gimlet-display", serif;
+  position: absolute;
+}
+
+.button-56:after {
+  content: "";
+  background-color: #aa7e7e;
+  border-radius: 8px;
+  position: absolute;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 48px;
+  transform: translate(8px, 8px);
+  transition: transform 0.2s ease-out;
+  z-index: -1;
+}
+
+.button-56:hover:after {
+  transform: translate(0, 0);
 }
 
 .button-container {
@@ -56,155 +66,98 @@
   z-index: 10;
 }
 
-.button-56:after {
-  background-color: #111;
-  border-radius: 8px;
-  content: "";
+.imgball {
+  width: 200px;
+  height: auto;
+  animation: spin 10s linear infinite;
   display: block;
-  height: 48px;
-  left: 0;
-  width: 100%;
+  margin: auto;
   position: absolute;
-  top: -2px;
-  transform: translate(8px, 8px);
-  transition: transform 0.2s ease-out;
-  z-index: -1;
+  top: 0;
+  left:0;
+  opacity:0.9;
+  z-index: 1;
+
 }
 
-.button-56:hover:after {
-  transform: translate(0, 0);
-}
-
-.button-56:active {
-  background-color: #ffdeda;
-  outline: 0;
-}
-
-.button-56:hover {
-  outline: 0;
-}
-
-@media (min-width: 768px) {
-  .button-56 {
-    padding: 0 40px;
-  }
-}
-
-marquee {
-  height: 90vh;
-}
-
-.ball {
-  max-width: 150px;
-  animation: animate 10s ease-out infinite;
-}
-
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-/* --- CARD styles --- */
-.card {
-  background-color: rgb(196, 106, 118);
-  min-height: 250px;
-  height: auto;
-  border: 3px solid red;
-  /* remove margin-left and margin-right to avoid breaking grid */
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-sizing: border-box; /* include padding/border in size */
-  width: 100%; /* fill grid cell width */
-  max-width: 250px; /* optional max width */
-}
-
-
-
-/* --- ROSTER GRID ---
-#rosterGrid {
-  display: grid;
-  grid-template-columns: repeat(1, 7fr);
-  gap: 20px 10px;
-  padding: 30px;
-  justify-content: center; /* center grid inside container 
-  max-width: 100%;
-}
- */
-
-.card:hover{
-  transform: scale(1.15);
-}
-
-.card-img-top {
-  width: 100%; /* full card width */
-  height: auto;
-  display: block;
-  border-radius: 8px;
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 .typing {
-    width: 0;
-    overflow: hidden;
-    white-space: nowrap;
-    border-right: 2px solid #bb3333;
-    font-size: 95px;
-    text-shadow:10px 10px 15px rgb(235, 10, 10);
-    color:white;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #bb3333;
+  font-size: 75px;
+  color: white;
+  text-shadow: 10px 10px 15px rgb(235, 10, 10);
   font-family: "cofo-kabeltouw-solid-0", sans-serif;
-font-weight: 400;
-font-style: normal;
-    animation: typing 12s linear infinite, cursor 0.6s step-end infinite;
-    display: block;
-    margin: 80px auto 0 auto;
-    margin-bottom:30px;
-    text-align: center;
+  animation: typing 12s linear infinite, cursor 0.6s step-end infinite;
+  display: block;
+  text-align: center;
+  margin: 80px auto 30px auto;
 }
 
 @keyframes typing {
-    0% {
-        width: 0;
-    }
-    50% {
-        width:1000px; /* Adjust as needed */
-    }
-    100% {
-        width: 0;
-    }
+  0% { width: 0; }
+  50% { width: 1000px; }
+  100% { width: 0; }
 }
 
 @keyframes cursor {
-    0%, 100% {
-        border-color: #ff2b2b;
-    }
-    50% {
-        border-color: transparent;
-    }
-}
-.cofo-kabeltow-solid-0{
-  font-family: "cofo-kabeltouw-solid-0", sans-serif;
-font-weight: 400;
-font-style: normal;
+  0%, 100% { border-color: #ff2b2b; }
+  50% { border-color: transparent; }
 }
 
-
-.soc{
-  width:70px;
+.sidebar {
+  background: red;
+  padding: 15px;
+  width: 200px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  z-index: 1;
 }
+
+.sidebar .soc {
+  width: 70px;
+  display: block;
+  margin: 0 auto;
+}
+
+.sidebar-nav {
+  margin-top: 20px;
+}
+
+.nav-list {
+  list-style: none;
+  padding: 0;
+}
+
+.nav-item {
+  margin: 15px 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .material-symbols-rounded {
   font-family: 'Material Symbols Rounded';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px; /* or whatever size you want */
-  line-height: 1;
-  letter-spacing: normal;
-  text-transform: none;
-  display: inline-block;
-  white-space: nowrap;
-  direction: ltr;
+  font-size: 24px;
+}
+.ball-button-wrapper{
+  position:relative;
+  width:220px;
+  height:220px;
+  margin:50px auto;
+
 }
