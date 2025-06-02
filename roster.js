@@ -63,11 +63,11 @@ document.addEventListener('DOMContentLoaded', () => {
       btn.textContent = 'More Info';
       btn.setAttribute('data-index', index);
 
-      btn.addEventListener('click', (event) => {
-        const playerIndex = event.target.getAttribute('data-index');
+      btn.addEventListener('click', function() {
+        const playerIndex = this.getAttribute('data-index');
         const player = list[playerIndex];
-        modalTitle.textContent = `${player.firstName} ${player.lastName}`;
-        modalBody.textContent = player.Fact;
+        modalTitle.textContent = `⚽${player.firstName} ${player.lastName}`;
+        modalBody.textContent = `⚽ ${player.Fact}`;
         modal.show();
       });
 
