@@ -19,19 +19,67 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://use.typekit.net/hhz4xxp.css">
         <link rel="stylesheet" href="https://use.typekit.net/mks6gyf.css">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded" rel="stylesheet" />
 
     </head>
 
     <body class="body">
-         <div class="cssanimation typing"> Roster Page </div>
-        <header>
+  
             <!-- place navbar here -->
-        </header>
-        <main class="container">
+
+
+  <aside class="sidebar">
+    <header>
+      <a href="index.html" class="header-logo">
+        <div class="ball-button-wrapper">
+       
+       
+    </header>
+    <nav class="sidebar-nav">
+      <ul class="nav-list">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">
+            <div class="nav-icon-group">
+            <img src="soccer.png" alt="Soccer Logo" class="soc">
+         
+            <span class="material-symbols-rounded">dashboard</span>
+       </div>
+            <div class="nav-text">Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="start.html" class="nav-link">
+            <span class="material-symbols-rounded">settings</span>
+            <div class="nav-text">Settings</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="index.html" class="nav-link">
+            <span class="material-symbols-rounded">today</span>
+            <div class="nav-text">Today</span>
+          </a>
+        </li>
+           <div class="button-container">
+    <a href="start.html">
+      <button class="button-56" role="button">Click Here</button>
+    </a>
+  </div>
+      </a>
+      </div>
+      </ul>
+    </nav>
+  </aside>
+         <div class="cssanimation typing"> Roster Page </div>
+
+        
+        <main class="main-content">
             <div id="rosterGrid" class="row justify-content-center text-center g-3">
     
             </div>
         </main>
+         <section>
+    <img src="loh.png" alt="Soccer Ball" class="imgball">
+  </section>
         <footer>
             <!-- place footer here -->
         </footer>
@@ -49,5 +97,28 @@
         ></script>
         <script src="players.js"></script>
         <script src="roster.js"></script>
+
+        <div class="modal fade" id="teamModal" tabindex="-1" aria-labelledby="modalTitle"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="modalTitle">Player Info</h5>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body" id="modalBody">
+                                          Show player fact here.
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary"
+                                                data-bs-dismiss="modal">OK</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
     </body>
 </html>
