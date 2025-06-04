@@ -274,13 +274,17 @@ body.team{
 .carousel-inner img{
   height:auto;
   object-fit:cover;
+  width:60%;
 }
 .carousel-caption{
   background-color:white;
   padding:20px;
   border-radius:10px;
-  max-width:100%;
+  max-width:80%;
   margin:0 auto;
   color:black;
   font-size:20px;
+}
+.carousel {
+  width:90%;
 }
